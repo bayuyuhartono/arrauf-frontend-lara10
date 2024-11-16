@@ -42,7 +42,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           {{-- <li><a href="index.html" class="active">Home<br></a></li> --}}
-          <li><a href="about.html">Halaman Depan</a></li>
+          <li><a href="/">Halaman Depan</a></li>
           <li><a href="#">TK</a></li>
           <li><a href="#">SD</a></li>
           <li><a href="#">Unit Usaha</a></li>
