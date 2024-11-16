@@ -61,12 +61,13 @@ class WebController extends BaseController
     {
         $data = $this->getNewsData();
             
-        return view('page.news.index', $data['data']);
+        return view('page.news.index', $data);
     }
 
     public function registration()
     {
         $data = $this->getPageData('registration');
+        $data['daftar'] = 'https://forms.gle/LHqgyWx7VgGnXE7n6';
             
         return view('page.blogpage.index', $data);
     }
@@ -87,7 +88,7 @@ class WebController extends BaseController
         $getData = $this->client->request('GET', '/blog/news')->getBody();
         $getData = json_decode($getData);
 
-        $result['data'] = $getData->data ?? "";
+        $result['data'] = $getData->data ?? [];
 
         return $result;
     }

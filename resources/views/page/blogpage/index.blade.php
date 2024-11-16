@@ -18,6 +18,12 @@
 <br>
 <div class="container">
   {!! $content !!}
+
+  @if (isset($daftar))
+    <center><a href="{{ $daftar }}" class="btn btn-primary" target="_blank">>>> Formulir PPDB <<<</a></center>
+  @endif
+
 </div>
+
 
 @endsection

@@ -21,4 +21,4 @@ Route::get('/unitusaha', [WebController::class, 'businessunit']);
 Route::get('/tentangkami', [WebController::class, 'aboutus']);
 Route::get('/kontak', [WebController::class, 'contact']);
 Route::get('/news', [WebController::class, 'news']);
-Route::get('/daftar', [WebController::class, 'registration']);
+Route::get('/pendaftaran', [WebController::class, 'registration']);

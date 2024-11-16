@@ -13,7 +13,7 @@
     <li><a href="tentangkami" class="{{ (request()->segment(1) == "tentangkami") ? 'active' : '' }}">Tentang Kami</a></li>
     <li><a href="kontak" class="{{ (request()->segment(1) == "kontak") ? 'active' : '' }}">Kontak</a></li>
     <li><a href="news" class="{{ (request()->segment(1) == "news") ? 'active' : '' }}">News</a></li>
-    <li><a href="daftar" class="{{ (request()->segment(1) == "daftar") ? 'active' : '' }}">Daftar PPDB</a></li>
+    <li><a href="pendaftaran" class="{{ (request()->segment(1) == "daftar") ? 'active' : '' }}">Daftar PPDB</a></li>
   </ul>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
