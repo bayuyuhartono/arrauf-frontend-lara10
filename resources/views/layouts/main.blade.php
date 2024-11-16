@@ -32,28 +32,7 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/images/arrauflogo.png" alt="">
-        {{-- <h1 class="sitename">Ar-Rauf</h1> --}}
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          {{-- <li><a href="index.html" class="active">Home<br></a></li> --}}
-          <li><a href="/">Halaman Depan</a></li>
-          <li><a href="#">TK</a></li>
-          <li><a href="#">SD</a></li>
-          <li><a href="#">Unit Usaha</a></li>
-          <li><a href="#">Tentang Kami</a></li>
-          <li><a href="#">Kontak</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Daftar PPDB</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
+      @include('layouts.shared.menu')
     </div>
   </header>
 
@@ -62,40 +41,7 @@
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
-    {{-- <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Mentor</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div> --}}
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ar Rauf</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
-    </div>
-
+    @include('layouts.shared.footer')
   </footer>
 
   <!-- Scroll Top -->

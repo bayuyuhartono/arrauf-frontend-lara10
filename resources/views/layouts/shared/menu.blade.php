@@ -1,39 +1,19 @@
-<nav class="mt-2">
-  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-    @foreach (Session('menu_session') as $menu)
-      @if (!isset($menu->child))
-        <li class="nav-item {{ (request()->segment(1) ==  $menu->url) ? 'menu-open' : '' }}">
-          <a href="{{ url($menu->url) }}" class="nav-link {{ (request()->segment(1) == $menu->url) ? 'active' : '' }}">
-            <p>{{ $menu->title }}</p>
-          </a>
-        </li>
-      @else
-        <li class="nav-item {{ (request()->segment(1) == $menu->url) ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link  {{ (request()->segment(1) == $menu->url) ? 'active' : '' }}">
-            <p>
-              {{ $menu->title }}
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            @foreach ($menu->child as $child)
-            @php
-                $multipleController = ['gallery'];
-                $segmentNumber = in_array(request()->segment(2), $multipleController) ? 3 : 2;
-                $segmentCheck = (isset(explode("/", $child->url)[$segmentNumber - 1])) 
-                  ? (request()->segment($segmentNumber) === explode("/", $child->url)[$segmentNumber - 1]) 
-                  : (request()->segment($segmentNumber - 1)  === $child->url);
-            @endphp
-              <li class="nav-item">
-                <a href="{{ url($child->url) }}" class="nav-link {{ $segmentCheck ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>{{ $child->title }}</p>
-                </a>
-              </li>
-            @endforeach
-          </ul>
-        </li>
-      @endif
-    @endforeach
+<a href="index.html" class="logo d-flex align-items-center me-auto">
+  <!-- Uncomment the line below if you also wish to use an image logo -->
+  <img src="assets/images/arrauflogo.png" alt="">
+  {{-- <h1 class="sitename">Ar-Rauf</h1> --}}
+</a>
+
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="/" class="{{ (request()->segment(1) == "") ? 'active' : '' }}">Halaman Depan</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "tk") ? 'active' : '' }}">TK</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "sd") ? 'active' : '' }}">SD</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "unitusaha") ? 'active' : '' }}">Unit Usaha</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "tentangkami") ? 'active' : '' }}">Tentang Kami</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "kontak") ? 'active' : '' }}">Kontak</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "news") ? 'active' : '' }}">News</a></li>
+    <li><a href="#" class="{{ (request()->segment(1) == "daftar") ? 'active' : '' }}">Daftar PPDB</a></li>
   </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
