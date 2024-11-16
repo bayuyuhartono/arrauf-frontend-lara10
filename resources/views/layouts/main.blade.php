@@ -26,6 +26,9 @@
 
   <!-- Main CSS File -->
   <link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
+
+  @stack('extra-style')
+
 </head>
 
 <body class="index-page">
@@ -60,6 +63,8 @@
 
   <!-- Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
+
+  @stack('extra-scripts')
 
 </body>
 
